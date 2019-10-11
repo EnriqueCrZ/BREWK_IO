@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <img src="{{asset('brewkIO.png')}}" alt="Los caminos de Uruk" class="img-fluid">
                 </div>
 
                 <div class="links">
