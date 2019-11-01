@@ -5,6 +5,6 @@
 
 @section('content')
     {{--<p>You are logged in!</p>--}}
-    <img src="{{asset('background.png')}}" alt="LOGO" class="img-responsive">
+    <img src="{{asset('brewkIO.png')}}" alt="LOGO" class="img-responsive">
 @stop
 

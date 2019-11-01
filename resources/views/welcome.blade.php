@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>BREWK</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -12,8 +12,13 @@
         <!-- Styles -->
         <style>
             html, body {
+                background-image: url("{{asset('Uruk.jpg')}}");
+                background-position: center; /* Center the image */
+                background-repeat: no-repeat; /* Do not repeat the image */
+                background-size: cover; /* Resize the background image to cover the entire container */
                 background-color: #fff;
                 color: #636b6f;
+                text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -49,7 +54,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #fff;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -81,7 +86,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <img src="{{asset('brewkIO.png')}}" alt="Los caminos de Uruk" class="img-fluid">
+                    <img src="{{asset('brewkIO.png')}}" alt="Los caminos de Uruk" class="img-fluid border border-dark">
                 </div>
 
                 <div class="links">

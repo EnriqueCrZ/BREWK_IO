@@ -2,6 +2,17 @@
 
 @section('adminlte_css')
     @yield('css')
+    <style>
+        .register-page {
+            background-image: url("{{asset('Uruk.jpg')}}");
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */
+        }
+        .register-logo{
+            background-color: white;
+        }
+    </style>
 @stop
 
 @section('body_class', 'register-page')

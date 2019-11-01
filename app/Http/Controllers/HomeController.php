@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account\Departamento;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if(Auth::user()->first_use != 'Yes'){
+            return view('home');
+        }else{
+            $departamentos = Departamento::all();
+            return view('account.new_account',compact('departamentos'));
+        }
     }
 }

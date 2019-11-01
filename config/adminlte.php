@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 2',
+    'title' => 'BREWK',
 
     'title_prefix' => '',
 
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'blue-light',
+    'skin' => 'black',
 
     /*
     |--------------------------------------------------------------------------
@@ -142,7 +142,7 @@ return [
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-file',
-            'label'       => 4,
+            //'label'       => 4,
             'label_color' => 'success',
         ],
         ['header' => 'account_settings'],

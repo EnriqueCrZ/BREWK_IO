@@ -3,6 +3,17 @@
 @section('adminlte_css')
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/vendor/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     @yield('css')
+    <style>
+        .login-page {
+            background-image: url("{{asset('Uruk.jpg')}}");
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */
+        }
+        .login-logo{
+            background-color: white;
+        }
+    </style>
 @stop
 
 @section('body_class', 'login-page')
