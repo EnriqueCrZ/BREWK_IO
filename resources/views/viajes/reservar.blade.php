@@ -119,6 +119,7 @@
             $('#bus').empty();
             $('#origen').empty();
             $('#destino').empty();
+            $('#destino_usuario').empty();
             $.ajax({
                 url: '{{route('reservar.itinerario')}}',
                 data: {'id': data},
@@ -130,7 +131,7 @@
                     for($i=0;$i<data.destinos_disp.length;$i++){
                             $('#destino_usuario').append('<option value="'+ data.destinos_disp[$i].id_ruta+'">' + data.destinos_disp[$i].lugar + '</option>')
                     }
-                    $('#precio').val(data.destinos_disp[0].costo);
+                    $('#precio').val('Q.'+data.destinos_disp[0].costo);
                 }
             })
         });
@@ -141,7 +142,7 @@
                 url: '{{route('reservar.precio')}}',
                 data: {'id':data},
                 success: data =>{
-                    $('#precio').val(data.precio);
+                    $('#precio').val('Q.'+data.precio);
                 }
             })
         })

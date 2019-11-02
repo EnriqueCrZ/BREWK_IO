@@ -120,6 +120,5 @@ class Viajes extends Controller
         $destino_f = DB::table('lugar')->where('id_lugar','=',$destino->lugar_id_lugar)->value('descripcion');
 
         return view('viajes.viajes',compact('pago','itinerario','origen_f','destino_f','rutaFinal','detalles'));
-
     }
 }
