@@ -90,13 +90,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://docs.google.com/document/d/1vxBh4GJ8ebtuishkP61JNpnRwd8YdJwX32BWr0V1If0/edit?ts=5da940ed">Docs</a>
+                    <a href="https://github.com/EnriqueCrZ/BREWK_IO">GitHub</a>
                 </div>
             </div>
         </div>

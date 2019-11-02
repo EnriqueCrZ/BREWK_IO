@@ -128,10 +128,10 @@ return [
     */
 
     'menu' => [
-        [
+        /*[
             'text' => 'search',
-            'search' => true,
-        ],
+            'search' => false,
+        ],*/
         ['header' => 'main_navigation'],
         [
             'text' => 'blog',
@@ -139,9 +139,16 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-file',
+            'text'        => 'Reservar viaje',
+            'url'         => 'brewk/viajes',
+            'icon'        => 'fas fa-bus',
+            //'label'       => 4,
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Mis Viajes',
+            'url'         => 'brewk/viajes/facturados',
+            'icon'        => 'fas fa-route',
             //'label'       => 4,
             'label_color' => 'success',
         ],
@@ -151,23 +158,25 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
-        [
+        /*[
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
-        ],
+        ],*/
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Seguridad',
+            'icon'    => 'fas fa-fw fa-lock',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Cambiar contraseña',
                     'url'  => '#',
+                    'icon_color' => 'red',
                 ],
                 [
-                    'text'    => 'level_one',
+                    'text'    => 'Cambiar email',
                     'url'     => '#',
-                    'submenu' => [
+                    'icon_color' => 'red',
+                    /*'submenu' => [
                         [
                             'text' => 'level_two',
                             'url'  => '#',
@@ -186,25 +195,25 @@ return [
                                 ],
                             ],
                         ],
-                    ],
+                    ],*/
                 ],
-                [
+                /*[
                     'text' => 'level_one',
                     'url'  => '#',
-                ],
+                ],*/
             ],
         ],
         ['header' => 'labels'],
         [
-            'text'       => 'important',
+            'text'       => 'En desarrollo',
             'icon_color' => 'red',
         ],
         [
-            'text'       => 'warning',
+            'text'       => 'En desarrollo',
             'icon_color' => 'yellow',
         ],
         [
-            'text'       => 'information',
+            'text'       => 'En desarrollo',
             'icon_color' => 'aqua',
         ],
     ],
