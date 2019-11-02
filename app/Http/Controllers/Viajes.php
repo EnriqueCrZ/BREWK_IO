@@ -86,7 +86,7 @@ class Viajes extends Controller
         return route('home');
     }
 
-    public function viajes(){
+    /*public function viajes(){
         $account = Account::where('users_id',Auth::user()->id)->first();
         $pago = Pago::where('account_dpi',$account->dpi)->first();
         $itinerario = Itinerario::where('id_itinerario',$pago->itinerario_id_itinerario)->first();
@@ -104,5 +104,22 @@ class Viajes extends Controller
             ->get();
 
         return view('viajes.viajes',compact('viajes'));
+    }*/
+
+    public function viajes(){
+        $account = Account::where('users_id',Auth::user()->id)->first();
+        $pago = Pago::where('account_dpi',$account->dpi)->first();
+        $detalles = Detalle_viaje::where('pago_id_transaccion',$pago->id_transaccion)->first();
+        $itinerario = Itinerario::where('id_itinerario',$pago->itinerario_id_itinerario)->first();
+        $transbordo = Transbordo::where('itinerario_id_itinerario','=',$pago->itinerario_id_itinerario)->first();
+        $ruta = Ruta::where('id_ruta',$itinerario->ruta_id_ruta)->first();
+        $rutaFinal = Ruta::where('id_ruta',$transbordo->ruta_id_ruta)->first();
+        $origen = Origen::where('id_origen',$ruta->origen_id_origen)->first();
+        $destino = Destino::where('id_destino',$rutaFinal->destino_id_destino)->first();
+        $origen_f = DB::table('lugar')->where('id_lugar','=',$origen->lugar_id_lugar)->value('descripcion');
+        $destino_f = DB::table('lugar')->where('id_lugar','=',$destino->lugar_id_lugar)->value('descripcion');
+
+        return view('viajes.viajes',compact('pago','itinerario','origen_f','destino_f','rutaFinal','detalles'));
+
     }
 }

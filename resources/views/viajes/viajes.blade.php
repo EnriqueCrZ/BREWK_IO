@@ -12,51 +12,50 @@
     </style>
 @stop
 @section('content')
-    @foreach($viajes as $viaje)
-        <h2>Viaje #{{$loop->iteration}}</h2>
+
+        <h2>Viaje </h2>
     <div class="row">
         <div class="col col-5">
             <div class="form-group">
                 <label>Itinerario</label>
-                 <input value="{{$viaje->id_itinerario}}" class="form-control-plaintext">
+                 <input value="{{$itinerario->id_itinerario}}" class="form-control-plaintext">
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-3">
             <label>Hora de salida: </label>
-            <input type="text" class="form-control-plaintext" id="hora_salida" value="{{$viaje->hora_salida}}">
+            <input type="text" class="form-control-plaintext" id="hora_salida" value="{{$itinerario->hora_salida}}">
         </div>
         <div class="col-5">
             <label>Bus</label>
-            <input type="text" class="form-control-plaintext" id="bus" value="{{$viaje->bus_placa}}">
+            <input type="text" class="form-control-plaintext" id="bus" value="{{$itinerario->bus_placa}}">
         </div>
     </div>
     <div class="row">
         <div class="col-6">
             <label>Origen</label>
-            {{--<input type="text" class="form-control-plaintext" id="origen" value="{{$viaje->origen}}">--}}
+            <input type="text" class="form-control-plaintext" id="origen" value="{{$origen_f}}">
         </div>
     </div>
     <hr/>
     <div class="row">
         <div class="col-6">
             <label for="dpi">Su Destino </label>
-            <input type="text" id="destino_usuario" name="destino_usuario" class="form-control-plaintext" value="{{$viaje->destino_usuario}}">
+            <input type="text" id="destino_usuario" name="destino_usuario" class="form-control-plaintext" value="{{$destino_f}}">
 
         </div>
         <div class="col-4">
             <label>Precio: </label>
-            <input type="text" name="precio" id="precio" class="form-control-plaintext" value="{{$viaje->precio}}">
+            <input type="text" name="precio" id="precio" class="form-control-plaintext" value="{{$rutaFinal->costo}}">
         </div>
     </div>
     <div class="row">
         <div class="col-4">
             <div class="form-group">
                 <label>Motivo del viaje</label>
-                <input type="text" name="motivo" maxlength="75" class="form-control-plaintext" value="{{$viaje->motivo}}">
+                <input type="text" name="motivo" maxlength="75" class="form-control-plaintext" value="{{$detalles->descripcion}}">
             </div>
         </div>
     </div>
-    @endforeach
 @stop
